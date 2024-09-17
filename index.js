@@ -211,23 +211,24 @@ const app = express();
 const port = 3000;
 
 // Web sunucu
+const express = require('express');
+const app = express();
+const port = 3000;
 app.get('/', (req, res) => {
   res.sendStatus(200);
 });
-
 app.listen(port, () => {
   console.log(`Sunucu ${port} numaralı bağlantı noktasında yürütülüyor.`);
 });
 
-const { joinVoiceChannel } = require('discordjs@voice')
-    client.on('ready', () => {
-        let channel = client.channel.cache.get("1226237042954862644")
+const { joinVoiceChannel } = require('@discordjs/voice')
+client.on('ready', () => {
+  let channel = client.channels.cache.get("1226237042954862644")
 
 
-
-        const VoiceConnection = JoinVoiceChannel({
-            channelID: channel.id,
-            guildID: guild.id,
-            adapterCreator: channel.guild.voiceAdapterCreator
-        });
-    })
+      const VoiceConnection = joinVoiceChannel({
+          channelId: channel.id,
+          guildId: channel.guild.id,
+          adapterCreator: channel.guild.voiceAdapterCreator
+  });
+})
