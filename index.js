@@ -23,20 +23,6 @@ readdirSync('./commands').forEach(f => {
         type: 1
     });
 
-    // Sunucu oluşturma ve proje aktivitesi sağlama.
-const express = require('express');
-const app = express();
-const port = 3000;
-
-// Web sunucu
-app.get('/', (req, res) => {
-  res.sendStatus(200);
-});
-
-app.listen(port, () => {
-  console.log(`Sunucu ${port} numaralı bağlantı noktasında yürütülüyor.`);
-});
-
     console.log(`[COMMAND] ${props.name} komutu yüklendi.`)
 
 });
@@ -58,7 +44,7 @@ const tracker = InvitesTracker.init(client, {
     fetchAuditLogs: true
 });
 
-client.login(TOKEN)
+client.login(process.env.token);
 
 // Bir Hata Oluştu
 process.on("unhandledRejection", (reason, p) => {
@@ -219,7 +205,19 @@ client.on('guildMemberRemove', (member) => {
         }
     }
 })
+// Sunucu oluşturma ve proje aktivitesi sağlama.
+const express = require('express');
+const app = express();
+const port = 3000;
 
+// Web sunucu
+app.get('/', (req, res) => {
+  res.sendStatus(200);
+});
+
+app.listen(port, () => {
+  console.log(`Sunucu ${port} numaralı bağlantı noktasında yürütülüyor.`);
+});
 
 const { joinVoiceChannel } = require('discordjs@voice')
     client.on('ready', () => {
