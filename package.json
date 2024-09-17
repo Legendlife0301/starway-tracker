@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Lourity",
+  "author": "legendlife0301",
   "license": "MIT",
   "dependencies": {
     "@androz2091/discord-invites-tracker": "^1.2.3",
