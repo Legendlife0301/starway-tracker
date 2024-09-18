@@ -205,11 +205,6 @@ client.on('guildMemberRemove', (member) => {
         }
     }
 })
-// Sunucu oluşturma ve proje aktivitesi sağlama.
-const express = require('express');
-const app = express();
-const port = 3000;
-
 // Web sunucu
 const express = require('express');
 const app = express();
