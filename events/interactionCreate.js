@@ -1,8 +1,6 @@
 const { Collection, EmbedBuilder } = require("discord.js");
 const db = require("croxydb");
 const { readdirSync } = require("fs");
-//lourity?
-// discord.gg/altyapilar'a aittir paylaşılamaz
 module.exports = async (client, interaction) => {
 
   if (interaction.isChatInputCommand()) {
