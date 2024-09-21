@@ -28,8 +28,7 @@ module.exports = async (client) => {
   console.log(`${client.user.tag} Aktif!`);
 
   setInterval(async () => {
-// discord.gg/altyapilar'a aittir paylaşılamaz
-    const activities = ["lourity?", "lourity :3"]
+    const activities = ["discord.gg/starway"]
     const random = activities[
       Math.floor(Math.random() * activities.length)];
     client.user.setActivity(`${random}`)
