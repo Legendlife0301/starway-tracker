@@ -44,7 +44,7 @@ const tracker = InvitesTracker.init(client, {
     fetchAuditLogs: true
 });
 
-client.login(TOKEN)
+client.login(process.env.token)
 
 // Bir Hata Oluştu
 process.on("unhandledRejection", (reason, p) => {
