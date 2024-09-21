@@ -206,6 +206,18 @@ client.on('guildMemberRemove', (member) => {
     }
 })
 
+const { joinVoiceChannel } = require('@discordjs/voice')
+client.on('ready', () => {
+  let channel = client.channels.cache.get("SES GIRILCEK KANAL ID YAZ")
+ 
+
+      const VoiceConnection = joinVoiceChannel({
+          channelId: channel.id,
+          guildId: channel.guild.id,
+          adapterCreator: channel.guild.voiceAdapterCreator
+  });
+})
+
 // Sunucu oluşturma ve proje aktivitesi sağlama.
 const express = require('express');
 const app = express();
