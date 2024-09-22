@@ -1,6 +1,5 @@
 ﻿const { Client, EmbedBuilder, PermissionsBitField } = require("discord.js");
 const db = require("croxydb");
-// lourity?
 module.exports = {
     name: "davet-sistemi",
     description: 'Gelişmiş davet sistemini ayarlarsın.',
