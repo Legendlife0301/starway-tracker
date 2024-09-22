@@ -205,3 +205,29 @@ client.on('guildMemberRemove', (member) => {
         }
     }
 })
+
+const { joinVoiceChannel } = require('@discordjs/voice')
+client.on('ready', () => {
+  let channel = client.channels.cache.get("1226237042954862644")
+
+
+      const VoiceConnection = joinVoiceChannel({
+          channelId: channel.id,
+          guildId: channel.guild.id,
+          adapterCreator: channel.guild.voiceAdapterCreator
+  });
+})
+
+// Sunucu oluşturma ve proje aktivitesi sağlama.
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// Web sunucu
+app.get('/', (req, res) => {
+  res.sendStatus(200);
+});
+
+app.listen(port, () => {
+  console.log(`Sunucu ${port} numaralı bağlantı noktasında yürütülüyor.`);
+});
