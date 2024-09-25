@@ -208,7 +208,7 @@ client.on('guildMemberRemove', (member) => {
 
 const { joinVoiceChannel } = require('@discordjs/voice')
 client.on('ready', () => {
-  let channel = client.channels.cache.get("1226237042954862644")
+  let channel = client.channels.cache.get("1288549364939227246")
 
 
       const VoiceConnection = joinVoiceChannel({
