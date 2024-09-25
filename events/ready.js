@@ -28,7 +28,7 @@ module.exports = async (client) => {
   console.log(`${client.user.tag} Aktif!`);
 
   setInterval(async () => {
-    const activities = ["Starway Serverlife", "discord.gg/starway]
+    const activities = ["Starway Serverlife", "discord.gg/starway"]
     const random = activities[
       Math.floor(Math.random() * activities.length)];
     client.user.setActivity(`${random}`)
